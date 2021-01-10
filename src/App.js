@@ -1,7 +1,8 @@
-import './App.css'
+import './layout.scss'
+import Header from './components/Header'
 
 function App() {
-  return <h1>HEllO Earth 2.0</h1>
+  return <Header />
 }
 
 export default App
