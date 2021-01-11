@@ -28,7 +28,7 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: #161415 url(./images/header-background.jpg) no-repeat top center;
+  background: #161415 url(../images/header-background.jpg) no-repeat top center;
   background-size: cover !important;
   text-align: center;
   overflow: hidden;
@@ -179,3 +179,54 @@ ul#nav {
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */
+#about {
+  background: #2b2b2b;
+  padding-top: 96px;
+  padding-bottom: 66px;
+  overflow: hidden;
+  a,
+  a:visited {
+    color: #fff;
+  }
+  a:hover,
+  a:focus {
+    color: #11abb0;
+  }
+  h2 {
+    font: 22px/30px 'opensans-bold', sans-serif;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  p {
+    line-height: 30px;
+    color: #7a7a7a;
+  }
+  .profile-pic {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+  }
+  .contact-details {
+    width: 41.66667%;
+  }
+  .download {
+    width: 58.33333%;
+    padding-top: 6px;
+    .button {
+      margin-top: 6px;
+      background-color: #444;
+      &:hover {
+        background: #fff;
+        color: #2b2b2b;
+      }
+    }
+  }
+  .main-col {
+    padding-right: 5%;
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* d. Resume Section
+  /* ------------------------------------------------------------------ */
+}
