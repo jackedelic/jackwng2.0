@@ -70,7 +70,7 @@ const Header = ({
       </div>
       <p className='scrolldown'>
         <a href='#about' className='smoothscroll'>
-          <i className='icon-down circle'></i>
+          <i className='icon-down-circle'></i>
         </a>
       </p>
     </header>
