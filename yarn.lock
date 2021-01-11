@@ -6991,6 +6991,11 @@
     "import-local" "^3.0.2"
     "jest-cli" "^26.6.0"
 
+"jquery@^3.5.1":
+  "integrity" "sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.5.1.tgz"
+  "version" "3.5.1"
+
 "js-base64@^2.1.8":
   "integrity" "sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ=="
   "resolved" "https://registry.npmjs.org/js-base64/-/js-base64-2.6.4.tgz"

@@ -230,3 +230,157 @@ ul#nav {
   /* d. Resume Section
   /* ------------------------------------------------------------------ */
 }
+
+#resume {
+  background: #fff;
+  padding-top: 90px;
+  padding-bottom: 72px;
+  overflow: hidden;
+  a,
+  a:visited {
+    color: #11abb0;
+  }
+  a:hover,
+  a:focus {
+    color: #313131;
+  }
+  h1 {
+    font: 18px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    span {
+      border-bottom: 3px solid #11abb0;
+      padding-bottom: 6px;
+    }
+  }
+  h3 {
+    font: 25px/30px 'opensans-bold', sans-serif;
+  }
+  .header-col {
+    padding-top: 9px;
+  }
+  .main-col {
+    padding-right: 10%;
+  }
+  .education,
+  .work {
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .info {
+    font: 16px/24px 'librebaskerville-italic' serif;
+    color: #6e7881;
+    margin-bottom: 18px;
+    margin-top: 9px;
+    span {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .date {
+      font: 15px/24px 'opensans-regular', sans-serif;
+      margin-top: 6px;
+    }
+  }
+}
+
+/*----------------------------------------------*/
+/*	Skill Bars
+/*----------------------------------------------*/
+
+.bars {
+  width: 95%;
+  float: left;
+  padding: 0;
+  text-align: left;
+  .skills {
+    margin-top: 36px;
+    list-style: none;
+  }
+  li {
+    position: relative;
+    margin-bottom: 60px;
+    background-color: #ccc;
+    height: 42px;
+    border-radius: 3px;
+    em {
+      font: 15px 'opensans-bold', sans-serif;
+      color: #313131;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: normal;
+      position: relative;
+      top: -36px;
+    }
+  }
+}
+.bar-expand {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding-right: 24px;
+  background-color: #313131;
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 3px 0 0 3px;
+}
+@mixin skillanimate($level) {
+  @keyframes animate-#{$level} {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: $level * 1%;
+    }
+  }
+}
+.git {
+  @include skillanimate(80);
+  animation: animate-80 2s ease forwards;
+}
+.js {
+  @include skillanimate(80);
+  animation: animate-80 2s ease forwards;
+}
+.react {
+  @include skillanimate(75);
+  animation: animate-75 2s ease forwards;
+}
+.html {
+  @include skillanimate(70);
+  animation: animate-70 2s ease forwards;
+}
+.css {
+  @include skillanimate(65);
+  animation: animate-65 2s ease forwards;
+}
+.mongodb {
+  @include skillanimate(65);
+  animation: animate-65 2s ease forwards;
+}
+.postgres {
+  @include skillanimate(50);
+  animation: animate-50 2s ease forwards;
+}
+.java {
+  @include skillanimate(55);
+  animation: animate-55 2s ease forwards;
+}
+.spring {
+  @include skillanimate(40);
+  animation: animate-40 2s ease forwards;
+}
+.cpp {
+  @include skillanimate(40);
+  animation: animate-40 2s ease forwards;
+}
+.python {
+  @include skillanimate(40);
+  animation: animate-40 2s ease forwards;
+}
+
+/* ------------------------------------------------------------------ */
+/* e. Portfolio Section
+/* ------------------------------------------------------------------ */
