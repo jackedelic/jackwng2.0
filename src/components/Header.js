@@ -17,7 +17,12 @@ const Header = ({
     </li>
   ))
   return (
-    <header id='home'>
+    <header
+      id='home'
+      style={{
+        background: `#161415 url('${process.env.PUBLIC_URL}/images/header-background.jpg') no-repeat top center`
+      }}
+    >
       <nav id='nav-wrap'>
         <a href='#nav-wrap' className='mobile-btn' title='Show navigation'>
           Show navigation
