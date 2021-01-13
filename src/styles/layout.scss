@@ -5,9 +5,9 @@
   c. About Section
   d. Resume Section
   e. Portfolio Section
-  f. Call To Action Section
   f. Quotes Section
-  h. Contact Section
+  g. Contact Section
+  f. Call To Action Section
   i. Footer
 */
 
@@ -219,6 +219,10 @@ ul#nav {
       &:hover {
         background: #fff;
         color: #2b2b2b;
+      }
+      i {
+        margin-right: 15px;
+        font-size: 20px;
       }
     }
   }
@@ -539,5 +543,133 @@ ul#nav {
         border: none;
       }
     }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* g. Contact Section
+/* ------------------------------------------------------------------ */
+
+#contact {
+  background: #191919;
+  padding-top: 96px;
+  padding-bottom: 102px;
+  color: #636363;
+  .section-head {
+    margin-bottom: 42px;
+  }
+  a,
+  a:visited {
+    color: #11abb0;
+  }
+  a:hover,
+  a:focus {
+    color: #fff;
+  }
+  h1 {
+    font: 18px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ebeeee;
+    margin-bottom: 6px;
+    span {
+      display: none;
+    }
+    &:before {
+      font-family: 'FontAwesome';
+      content: '\f0e0';
+      padding-right: 10px;
+      font-size: 72px;
+      line-height: 72px;
+      text-align: left;
+      float: left;
+      color: #ebeeee;
+    }
+  }
+  h4 {
+    font: 16px/24px 'opensans-bold', sans-serif;
+    color: #ebeeee;
+    margin-bottom: 6px;
+  }
+  p.lead {
+    font: 18px/36px 'opensans-light', sans-serif;
+    padding-right: 3%;
+  }
+  .header-col {
+    padding-top: 6px;
+  }
+  form {
+    margin-bottom: 30px;
+    label {
+      font: 15px/24px 'opensans-bold', sans-serif;
+      margin: 12px 0;
+      color: #ebeeee;
+      display: inline-block;
+      float: left;
+      width: 26%;
+    }
+    input,
+    textarea,
+    select {
+      padding: 18px 10px;
+      color: #eee;
+      background-color: #373233;
+      margin-bottom: 42px;
+      border: 0;
+      outline: none;
+      font-size: 15px;
+      line-height: 24px;
+      width: 65%;
+    }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      color: #fff;
+      background-color: #11abb0;
+    }
+    button.submit {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #fff;
+      background-color: #0d0d0d;
+      border: none;
+      cursor: pointer;
+      height: auto;
+      display: inline-block;
+      border-radius: 3px;
+      margin-left: 26%;
+      &:hover {
+        color: #0d0d0d;
+        background-color: #fff;
+      }
+    }
+    span.required {
+      color: #11abb0;
+      font-size: 13px;
+    }
+  }
+  #message-warning,
+  #message-success {
+    display: none;
+    background-color: #0f0f0f;
+    padding: 24px;
+    margin-bottom: 36px;
+    width: 65%;
+    margin-left: 26%;
+    i {
+      margin-right: 10px;
+    }
+  }
+  #message-warning {
+    color: #d72828;
+  }
+  #message-success {
+    color: #11abb0;
+  }
+  #image-loader {
+    display: none;
+    position: relative;
+    left: 18px;
+    top: 17px;
   }
 }

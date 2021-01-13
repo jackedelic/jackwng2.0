@@ -52,7 +52,8 @@ About.defaultProps = {
     name: 'Jack Wong',
     image: 'images/',
     bio:
-      'I am a Computer Science student who loves building things using codes. I have 6-month experience as a frontend developer with SP Digital. I have deep interest in both frontend and backend technologies. I am on a never-ending quest to learning more about web technologies',
+      'I am a Computer Science student who loves building things using codes. I have 6-month experience as a frontend developer with SP Digital. I have deep interest in both frontend and backend technologies. I am on a never-ending quest to learning more about web technologies.\
+ I am a running freak. I run every day to keep myself sane. ',
     address: {
       city: 'Singapore'
     },
