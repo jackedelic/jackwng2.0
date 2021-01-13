@@ -47,8 +47,8 @@ const Header = ({
             </a>
           </li>
           <li>
-            <a href='#work' className='smoothscroll'>
-              Work
+            <a href='#portfolio' className='smoothscroll'>
+              Works
             </a>
           </li>
           <li>

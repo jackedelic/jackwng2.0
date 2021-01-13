@@ -1,3 +1,6 @@
+import jQuery from 'jquery'
+import 'magnific-popup'
+import './jquery-fittext'
 jQuery(document).ready(function ($) {
   /* 
     FitText settings
@@ -18,12 +21,11 @@ jQuery(document).ready(function ($) {
   $('.smoothscroll').on('click', function (e) {
     e.preventDefault()
     let target = this.hash
-    target = $(target)
     $('html, body')
       .stop()
       .animate(
         {
-          scrollTop: target.offset().top
+          scrollTop: $(target).offset().top
         },
         800,
         'swing',
@@ -37,20 +39,28 @@ jQuery(document).ready(function ($) {
     Highlight the current section in the navigation bar
   */
 
-  let sections = $('section')
+  let sections = document.getElementsByTagName('section')
   let navigation_links = $('#nav-wrap a')
+  let lastScrollTop = 0
+  window.addEventListener('scroll', function () {
+    let st = window.pageYOffset
+    for (let i = 0; i < sections.length; i++) {
+      let y = sections[i].getBoundingClientRect().y
+      let active_section = $(sections[i]) // About, Contact, Portfolio, Quote, Resume.
 
-  sections.waypoint({
-    handler: function (event, direction) {
-      let active_section = $(this) // About, Contact, Portfolio, Quote, Resume.
-      if (direction === 'up') active_section = active_section.prev()
-      let active_link = $(
-        "#nav-wrap a[href='#" + active_section.attr('id') + "']"
-      )
-      navigation_links.parent().removeClass('current')
-      active_link.parent().addClass('current')
-    },
-    offset: '35%'
+      if (y < Math.round(0.5 * window.innerHeight) + 10 && y > 0) {
+        if (st < lastScrollTop) {
+          // upscroll
+          active_section = active_section.prev()
+        }
+        let active_link = $(
+          "#nav-wrap a[href='#" + active_section.attr('id') + "']"
+        )
+        navigation_links.parent().removeClass('current') // remove class from all li
+        active_link.parent().addClass('current')
+      }
+    }
+    lastScrollTop = st <= 0 ? 0 : st
   })
 
   /* 

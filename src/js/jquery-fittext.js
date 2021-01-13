@@ -8,7 +8,7 @@
  *
  * Date: Thu May 05 14:23:00 2011 -0600
  */
-
+import jQuery from 'jquery'
 ;(function ($) {
   $.fn.fitText = function (kompressor, options) {
     // Setup options
