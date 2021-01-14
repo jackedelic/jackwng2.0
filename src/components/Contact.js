@@ -51,11 +51,7 @@ const Contact = ({
         'Content-Type': 'application/json'
       }
     }
-    const response = await axios.post(
-      'https://jackwng2p0server-aec720.asia1.kinto.io:5000/contact',
-      body,
-      config
-    )
+    const response = await axios.post(`/contact`, body, config)
     if (response.status === 200) {
       displaySuccess()
     } else {
