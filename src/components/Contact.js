@@ -51,7 +51,11 @@ const Contact = ({
         'Content-Type': 'application/json'
       }
     }
-    const response = await axios.post(`/contact`, body, config)
+    const response = await axios.post(
+      `${process.env.REACT_APP_SERVER_IP}/contact`,
+      body,
+      config
+    )
     if (response.status === 200) {
       displaySuccess()
     } else {
