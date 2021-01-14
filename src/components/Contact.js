@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 const Contact = ({
   data: {
@@ -16,8 +17,50 @@ const Contact = ({
     contactmessage: ''
   })
 
-  const handleSubmit = e => {
+  const displaySuccess = (msg = 'Your message was sent. thank you!') => {
+    const el = document.getElementById('message-success')
+    el.style = 'display: block'
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const hideSuccess = () => {
+    const el = document.getElementById('message-success')
+    el.style = 'display: hide'
+  }
+
+  const displayError = (
+    msg = 'There is an error sending your message. I am sorry.'
+  ) => {
+    const el = document.getElementById('message-warning')
+    el.style = 'display: block '
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const hideError = () => {
+    const el = document.getElementById('message-warning')
+    el.style = 'display: none'
+  }
+
+  const handleSubmit = async e => {
     e.preventDefault()
+    hideError()
+    hideSuccess()
+    const body = formData
+    const config = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    const response = await axios.post(
+      'https://jackwng2p0server-aec720.asia1.kinto.io:5000/contact',
+      body,
+      config
+    )
+    if (response.status === 200) {
+      displaySuccess()
+    } else {
+      displayError()
+    }
   }
   return (
     <section id='contact'>
