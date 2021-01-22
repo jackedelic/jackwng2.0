@@ -423,6 +423,7 @@ ul#nav {
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease-in-out;
+    height: 300px;
     a {
       display: block;
       cursor: pointer;
@@ -462,12 +463,12 @@ ul#nav {
   .portfolio-item-meta {
     padding: 18px;
     p {
-      font: 12px/18px 'opensans-light', sans-serif;
+      font: 18px/18px 'opensans-light', sans-serif;
       color: #c6c7c7;
       margin-bottom: 0;
     }
     h5 {
-      font: 14px/21px 'opensans-light', sans-serif;
+      font: 20px/21px 'opensans-light', sans-serif;
       color: #c6c7c7;
       margin-bottom: 0;
     }
