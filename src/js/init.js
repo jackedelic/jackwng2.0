@@ -98,7 +98,7 @@ jQuery(document).ready(function ($) {
   */
 
   $('.item-wrap a').magnificPopup({
-    type: 'inline',
+    type: 'iframe',
     fixedContentPos: false,
     removalDelay: 200,
     showCloseBtn: false,
