@@ -5,7 +5,7 @@ const Footer = ({ data: { social } }) => {
     let { name, url, classname } = site
     return (
       <li key={name}>
-        <a href={url}>
+        <a href={url} rel='noopener noreferrer' target='_blank'>
           <i className={classname}></i>
         </a>
       </li>
