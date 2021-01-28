@@ -7,7 +7,12 @@ const Portfolio = ({ data: { projects } }) => {
     return (
       <div key={project.title} className='columns portfolio-item'>
         <div className='item-wrap'>
-          <a href={project.url} title={project.title}>
+          <a
+            href={project.url}
+            title={project.title}
+            rel='noopener noreferrer'
+            target='_blank'
+          >
             <img src={img} alt={project.title} />
             <div
               className='overlay'
@@ -68,7 +73,7 @@ Portfolio.defaultProps = {
       },
       {
         image: 'medium-thumbnail.png',
-        title: 'Sambl',
+        title: 'Medium',
         category: 'Medium blog posts | Personal blog',
         url: 'https://medium.com/@jackwong_60367'
       }

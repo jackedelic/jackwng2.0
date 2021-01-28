@@ -92,21 +92,4 @@ jQuery(document).ready(function ($) {
       }
     }
   })
-
-  /* 
-    Modal popup
-  */
-
-  $('.item-wrap a').magnificPopup({
-    type: 'iframe',
-    fixedContentPos: false,
-    removalDelay: 200,
-    showCloseBtn: false,
-    mainClass: 'mfp-fade'
-  })
-
-  $(document).on('click', '.popup-modal-dismiss', function (e) {
-    e.preventDefault()
-    $.magnificPopup.close()
-  })
 })
