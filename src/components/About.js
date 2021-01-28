@@ -35,7 +35,11 @@ const About = ({
             </div>
             <div className='columns download'>
               <p>
-                <a href={resumedownload} className='button'>
+                <a
+                  href={resumedownload}
+                  className='button'
+                  download='jackwong_resume'
+                >
                   <i className='fa fa-download'></i>Download Resume
                 </a>
               </p>
@@ -58,7 +62,8 @@ About.defaultProps = {
       city: 'Singapore'
     },
     phone: '+65 81417700',
-    email: 'jackwong3101@yahoo.com'
+    email: 'jackwong3101@yahoo.com',
+    resumedownload: '/resume.pdf'
   }
 }
 
